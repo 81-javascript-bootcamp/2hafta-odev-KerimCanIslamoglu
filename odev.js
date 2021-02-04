@@ -9,7 +9,7 @@ var car = {
     brand: "Toyota",
 
     displayDetails: function(){
-        console.log(this.registrationNumber + " " + this.brand);
+        console.log(this.car.registrationNumber + " " + this.car.brand);
     }
 }
 
@@ -28,9 +28,14 @@ bosluk icerebilir, ancak bosluk haridcindeki isimler en az 2 karakterden olusmal
 **/
 
 function isValidName(name) {
-  /// your code here
+ if (typeof name=="string"&&name!=""&&(name.replace(/ /g, "").length>1)){
+  
+   return console.log(true);
+ }
+  return console.log(false)
 }
 
+isValidName("a")
 
 
 /**
@@ -47,10 +52,11 @@ const book = {
 
 function summary(genre, year) {
   console.log(
-    `${this.title} was written by ${this.author}. It is a ${genre} novel written in ${year}.`,
+    `${book.title} was written by ${book.author}. It is a ${genre} novel written in ${year}.`,
   )
 }
 
+summary("dystopian",1932);
 
 
 
